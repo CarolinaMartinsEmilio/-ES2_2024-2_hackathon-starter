@@ -9,6 +9,6 @@
 
 👩 github: akarys2304, link:
 
-🧑 github: lgstavo, link: 
+🧑 github: lgstavo, link: https://github.com/lgstavo
 
 
