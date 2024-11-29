@@ -7,7 +7,7 @@
 
 👩 github: CarolinaMartinsEmilio, link: https://github.com/CarolinaMartinsEmilio
 
-👩 github: akarys2304, link:
+👩 github: akarys2304, link: https://github.com/akarys2304
 
 🧑 github: lgstavo, link: https://github.com/lgstavo
 
