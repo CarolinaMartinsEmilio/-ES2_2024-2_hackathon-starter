@@ -12,7 +12,7 @@
 ### ✅ Testes Manuais (via GUI) 
 * **Ambiente de Teste:**
   - Navegador: Microsoft Edge, Google Chrome
-  - Sistema Operacional: WWindows 🖥️, Linux 🐧
+  - Sistema Operacional: Windows 🖥️, Linux 🐧
 * **Testes Efeituados:**
 
 1️⃣  **Verificação do conteúdo da página inicial "Home".**
@@ -23,13 +23,14 @@
    
 - **Resultado Obtido:** Todo o conteúdo da página "Home" foi carregado corretamente, sem erros de renderização. Mas Ao clicar em cada botão "View Details"  não executam nenhuma ação.
 
-2️⃣ **Verificação do conteúdo da página "API Examples".**Verificar se os botões/ícones da página API Examples estão funcionando corretamente e se os redirecionamentos são feitos como esperado.
+2️⃣ **Verificação do conteúdo da página "API Examples".
 
 🎯 **Objetivo do Teste:** Verificar se os botões/ícones da página API Examples estão funcionando corretamente e se os redirecionamentos são feitos como esperado.
 
  - **Resultado Esperado:** Cada botão/ícone deve redirecionar corretamente para a página correspondente ou permitir a autenticação quando necessário.
    
 - **Resultado Obtido:** Os seguintes botões funcionam corretamente, abrindo uma nova aba com o conteúdo esperado:
+  
  ✅ GitHub
 
  ✅ Foursquare
@@ -69,6 +70,7 @@
  ✅ ProjectIssuesPrivacy 
  
  ✅ PolicyTerms of Use
+ 
 Os seguintes botões apresentam erro ao tentar fazer login:
 
 ❌ Facebook – Exibe erro: "Erro ao acessar aplicativo. Desculpe, mas o aplicativo que está tentando usar não existe ou foi desativado."
@@ -77,7 +79,7 @@ Os seguintes botões apresentam erro ao tentar fazer login:
 
 ❌ Google Sheets – Mesmo erro do Google Drive.
 
-A maioria dos botões da página API Examples está funcionando corretamente. No entanto, os botões do Facebook, Google Drive e Google Sheets apresentam erros que impedem a autenticação ou acesso. 
+A maioria dos botões da página API Examples está funcionando corretamenre. No entanto, os botões do Facebook, Google Drive e Google Sheets apresentam erros que impedem a autenticação ou acesso.
 ---
 ## 🎥 Gravação dos Testes
 
