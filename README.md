@@ -13,7 +13,8 @@
 * **Ambiente de Teste:**
   - Navegador: Microsoft Edge, Google Chrome
   - Sistema Operacional: WWindows 🖥️, Linux 🐧
-* **Testes Efeituados**
+* **Testes Efeituados:**
+
 1️⃣  **Verificação do conteúdo da página inicial "Home".**
 
 🎯 **Objetivo do Teste:** O objetivo deste teste foi verificar se os elementos da página inicial estão sendo exibidos corretamente e se os botões "View Details" estão funcionando conforme esperado.
