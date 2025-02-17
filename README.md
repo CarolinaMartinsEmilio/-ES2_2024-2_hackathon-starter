@@ -23,7 +23,62 @@
    
 - **Resultado Obtido:** Todo o conteúdo da página "Home" foi carregado corretamente, sem erros de renderização. Mas Ao clicar em cada botão "View Details"  não executam nenhuma ação.
 
-🕵️‍♀️ Evidências: 
+2️⃣ **Verificação do conteúdo da página "API Examples".**Verificar se os botões/ícones da página API Examples estão funcionando corretamente e se os redirecionamentos são feitos como esperado.
+
+🎯 **Objetivo do Teste:** Verificar se os botões/ícones da página API Examples estão funcionando corretamente e se os redirecionamentos são feitos como esperado.
+
+ - **Resultado Esperado:** Cada botão/ícone deve redirecionar corretamente para a página correspondente ou permitir a autenticação quando necessário.
+   
+- **Resultado Obtido:** Os seguintes botões funcionam corretamente, abrindo uma nova aba com o conteúdo esperado:
+ ✅ GitHub
+
+ ✅ Foursquare
+ 
+ ✅ Last.fm
+ 
+ ✅ New York Times
+ 
+ ✅ Steam
+ 
+ ✅ Twitch
+ 
+ ✅ Stripe
+ 
+ ✅ PayPal
+ 
+ ✅ QuickBooks
+ 
+ ✅ Twilio (text messaging)
+ 
+ ✅ Tumblr
+ 
+ ✅ Web Scraping
+ 
+ ✅ Lob (USPS mailing)
+ 
+ ✅ File Upload
+ 
+ ✅ Pinterest
+ 
+ ✅ HERE Maps
+ 
+ ✅ Chart.js + Alpha Vantage 
+ 
+ ✅ GitHub 
+ 
+ ✅ ProjectIssuesPrivacy 
+ 
+ ✅ PolicyTerms of Use
+Os seguintes botões apresentam erro ao tentar fazer login:
+
+❌ Facebook – Exibe erro: "Erro ao acessar aplicativo. Desculpe, mas o aplicativo que está tentando usar não existe ou foi desativado."
+
+❌ Google Drive – Exibe erro: "Este app está bloqueado. Este app tentou acessar informações confidenciais na sua Conta do Google. Para manter sua conta segura, o Google bloqueou o acesso."
+
+❌ Google Sheets – Mesmo erro do Google Drive.
+
+A maioria dos botões da página API Examples está funcionando corretamente. No entanto, os botões do Facebook, Google Drive e Google Sheets apresentam erros que impedem a autenticação ou acesso. 
+---
 ## 🎥 Gravação dos Testes
 
 Você pode assistir à gravação dos testes manuais no seguinte link:  
