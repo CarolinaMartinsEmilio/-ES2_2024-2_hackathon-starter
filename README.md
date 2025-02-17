@@ -1,47 +1,43 @@
-<h1>ES2_2024-2_hackathon-starter</h1>
+# 📌 ES2_2024-2_hackathon-starter
 
-## > Low code / No code
+## 🚀 Low Code / No Code
 
-### Integrantes do Grupo:
-👩 github: natycristina, link: https://github.com/natycristina
+### 👥 Integrantes do Grupo:
+- 👩 **[natycristina](https://github.com/natycristina)**
+- 👩 **[CarolinaMartinsEmilio](https://github.com/CarolinaMartinsEmilio)**
+- 👩 **[akarys2304](https://github.com/akarys2304)**
+- 🧑 **[lgstavo](https://github.com/lgstavo)**
 
-👩 github: CarolinaMartinsEmilio, link: https://github.com/CarolinaMartinsEmilio
+---
 
-👩 github: akarys2304, link: https://github.com/akarys2304
+## 📊 Testes e Cobertura de Código
 
-🧑 github: lgstavo, link: https://github.com/lgstavo
+### ✅ Testes Executados
 
+#### **User Model**
+- ✔️ should create a new user  
+- ✔️ should return error if user is not created  
+- ✔️ should not create a user with the unique email  
+- ✔️ should find user by email  
+- ✔️ should remove user by email  
+- ✔️ should check password (**61ms**)  
+- ✔️ should generate gravatar without email and size  
+- ✔️ should generate gravatar with size  
+- ✔️ should generate gravatar with email  
 
-##📊 Testes e Cobertura de Código (código original)
+🟢 **9 testes passando** (*99ms*)  
 
+---
 
-###✅ Testes Executados
-User Model
-✔️ should create a new user
+## 📊 Cobertura de Código
 
-✔️ should return error if user is not created
-
-✔️ should not create a user with the unique email
-
-✔️ should find user by email
-
-✔️ should remove user by email
-
-✔️ should check password (61ms)
-
-✔️ should generate gravatar without email and size
-
-✔️ should generate gravatar with size
-
-✔️ should generate gravatar with email
-
-🟢 9 testes passando (99ms)
-
-###📊 Cobertura de Código
 ![Relatório de Cobertura](images/coverage-report.jpeg)
 
+---
 
-###📌 Observações
-A cobertura de código está 70.83% em termos de linhas.
-Algumas linhas não estão cobertas pelos testes (37-43, 54).
-Melhorias nos testes podem focar nessas linhas para aumentar a cobertura.
+### 📌 Observações
+- A cobertura de código está **70.83%** em termos de linhas.
+- Algumas linhas não estão cobertas pelos testes (**37-43, 54**).
+- Melhorias nos testes podem focar nessas linhas para aumentar a cobertura.
+
+---
