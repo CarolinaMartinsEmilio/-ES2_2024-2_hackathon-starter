@@ -79,7 +79,18 @@ Os seguintes botões apresentam erro ao tentar fazer login:
 
 ❌ Google Sheets – Mesmo erro do Google Drive.
 
-A maioria dos botões da página API Examples está funcionando corretamenre. No entanto, os botões do Facebook, Google Drive e Google Sheets apresentam erros que impedem a autenticação ou acesso.
+A maioria dos botões da página API Examples está funcionando corretamente. No entanto, os botões do Facebook, Google Drive e Google Sheets apresentam erros que impedem a autenticação ou acesso.
+
+3️⃣ **Verificação do conteúdo da página "Contact".
+
+🎯 **Objetivo do Teste:** Verificar se o formulário de contato está funcionando corretamente e enviando os dados conforme esperado.
+
+ - **Resultado Esperado:** O formulário deve ser preenchido e enviado corretamente e uma mensagem de confirmação deve ser exibida.
+   
+- **Resultado Obtido:** O formulário de contato funciona corretamente e exibe a mensagem de sucesso.
+
+![Mensagem de sucesso](Imagens/sucesso.PNG)
+
 ---
 ## 🎥 Gravação dos Testes
 
