@@ -27,7 +27,7 @@
 ## 🎥 Gravação dos Testes
 
 Você pode assistir à gravação dos testes manuais no seguinte link:  
-[▶ Assista ao vídeo do teste]([https://www.youtube.com/seu-video-aqu](https://drive.google.com/file/d/1dxL3CWXwsZFLUBJDu8bRB0TnnHa3Pwrq/view?usp=drive_link)
+[▶ Assista ao vídeo do teste](https://drive.google.com/file/d/1dxL3CWXwsZFLUBJDu8bRB0TnnHa3Pwrq/view?usp=drive_link)
 
 ---
 ## 📊 Testes e Cobertura de Código
