@@ -9,10 +9,21 @@
 - 🧑 **[lgstavo](https://github.com/lgstavo)**
 
 ---
+### ✅ Testes Manuais (via GUI) 
+* Ambiente de Teste:
+  - Navegador: Microsoft Edge, Google Chrome
+  - Sistema Operacional: WWindows 🖥️, Linux 🐧
+*Testes Efeituados
+1️⃣ Verificação do conteúdo da página inicial "Home"
+🎯Objetivo do Teste: O objetivo deste teste foi verificar se os elementos da página inicial estão sendo exibidos corretamente e se os botões "View Details" estão funcionando conforme esperado.
+ -Resultado Esperado: Todo o conteúdo da página "Home" deve ser carregado corretamente, sem erros de renderização. Ao clicar em cada botão "View Details", verificar se há alguma ação executada (redirecionamento para outra página ou exibição de mais informações).
+-Resultado Obtido: Todo o conteúdo da página "Home" foi carregado corretamente, sem erros de renderização. Mas Ao clicar em cada botão "View Details"  não executam nenhuma ação.
+🕵️‍♀️Evidência
 
+---
 ## 📊 Testes e Cobertura de Código
-
-### ✅ Testes Executados
+---
+###  Testes Executados
 
 #### **User Model**
 - ✔️ should create a new user  
