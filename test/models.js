@@ -40,7 +40,7 @@ describe('User Model', () => {
   });
 
   it('should not create a user with the unique email', (done) => {
-    const UserMock = sinon.mock(User({ email: 'test@gmail.com', password: 'root' }));
+    const UserMock = sinon.mock(new User({ email: 'test@gmail.com', password: 'root' }));
     const user = UserMock.object;
     const expectedError = {
       name: 'MongoError',
@@ -137,5 +137,23 @@ describe('User Model', () => {
 
     const gravatar = user.gravatar();
     expect(gravatar.includes(md5)).to.equal(true);
+  });
+
+  it('should return error if user deletion fails', (done) => {
+    const userMock = sinon.mock(User);
+    const expectedError = new Error('Deletion failed');
+
+    userMock
+      .expects('deleteOne')
+      .withArgs({ email: 'test@gmail.com' })
+      .yields(expectedError);
+
+    User.deleteOne({ email: 'test@gmail.com' }, (err, result) => {
+      userMock.verify();
+      userMock.restore();
+      expect(err).to.equal(expectedError);
+      expect(result).to.be.undefined;
+      done();
+    });
   });
 });
