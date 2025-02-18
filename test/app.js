@@ -114,4 +114,12 @@ const { MongoMemoryServer } = require('mongodb-memory-server');
         .expect(404, done);
     });
   });
+  //novo teste
+   describe('GET /api/github', () => {
+    it('should return 200 OK', (done) => {
+      request(app)
+        .get('/api/github')
+        .expect(200, done);
+    });
+  });
 })();
