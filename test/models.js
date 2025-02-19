@@ -156,4 +156,185 @@ describe('User Model', () => {
       done();
     });
   });
+  
+  it('should return error if password comparison fails', (done) => {
+    const user = new User({ email: 'test@gmail.com', password: 'hashedpassword' });
+    sinon.stub(user, 'comparePassword').yields(new Error('Password comparison failed'));
+
+    user.comparePassword('wrongpassword', (err, isMatch) => {
+      expect(err).to.be.an('error');
+      expect(err.message).to.equal('Password comparison failed');
+      expect(isMatch).to.be.undefined;
+      done();
+    });
+  });
+
+  it('should update a user email', (done) => {
+    const userMock = sinon.mock(User);
+    const expectedResult = { nModified: 1 };
+
+    userMock
+      .expects('updateOne')
+      .withArgs({ email: 'test@gmail.com' }, { $set: { email: 'newemail@gmail.com' } })
+      .yields(null, expectedResult);
+
+    User.updateOne({ email: 'test@gmail.com' }, { $set: { email: 'newemail@gmail.com' } }, (err, result) => {
+      userMock.verify();
+      userMock.restore();
+      expect(err).to.be.null;
+      expect(result.nModified).to.equal(1);
+      done();
+    });
+  });
+  it('should return error if user update fails', (done) => {
+    const userMock = sinon.mock(User);
+    const expectedError = new Error('Update failed');
+
+    userMock
+      .expects('updateOne')
+      .withArgs({ email: 'nonexistent@gmail.com' }, { $set: { email: 'updated@gmail.com' } })
+      .yields(expectedError);
+
+    User.updateOne({ email: 'nonexistent@gmail.com' }, { $set: { email: 'updated@gmail.com' } }, (err, result) => {
+      userMock.verify();
+      userMock.restore();
+      expect(err).to.equal(expectedError);
+      expect(result).to.be.undefined;
+      done();
+    });
+  });
+
+  it('should return error if user is not found by ID', (done) => {
+    const userMock = sinon.mock(User);
+
+    userMock
+      .expects('findById')
+      .withArgs('invalidID')
+      .yields(null, null);
+
+    User.findById('invalidID', (err, result) => {
+      userMock.verify();
+      userMock.restore();
+      expect(err).to.be.null;
+      expect(result).to.be.null;
+      done();
+    });
+  });
+
+  it('should return error when trying to delete a nonexistent user', (done) => {
+    const userMock = sinon.mock(User);
+    const expectedResult = { nRemoved: 0 };
+
+    userMock
+      .expects('deleteOne')
+      .withArgs({ email: 'nonexistent@gmail.com' })
+      .yields(null, expectedResult);
+
+    User.deleteOne({ email: 'nonexistent@gmail.com' }, (err, result) => {
+      userMock.verify();
+      userMock.restore();
+      expect(err).to.be.null;
+      expect(result.nRemoved).to.equal(0);
+      done();
+    });
+  });
+
+  it('should return error if gravatar generation fails', () => {
+    const user = new User({ email: 'test@gmail.com' });
+    sinon.stub(user, 'gravatar').throws(new Error('Gravatar generation failed'));
+
+    expect(() => user.gravatar()).to.throw('Gravatar generation failed');
+  });
+
+  it('should return error if user saving fails due to database error', (done) => {
+    const UserMock = sinon.mock(new User({ email: 'test@gmail.com', password: 'root' }));
+    const user = UserMock.object;
+    const expectedError = new Error('Database error');
+
+    UserMock
+      .expects('save')
+      .yields(expectedError);
+
+    user.save((err, result) => {
+      UserMock.verify();
+      UserMock.restore();
+      expect(err).to.equal(expectedError);
+      expect(result).to.be.undefined;
+      done();
+    });
+  });
+
+  it('should return error if findById fails', (done) => {
+    const userMock = sinon.mock(User);
+    const expectedError = new Error('FindById failed');
+
+    userMock
+      .expects('findById')
+      .withArgs('12345')
+      .yields(expectedError);
+
+    User.findById('12345', (err, result) => {
+      userMock.verify();
+      userMock.restore();
+      expect(err).to.equal(expectedError);
+      expect(result).to.be.undefined;
+      done();
+    });
+  });
+
+  it('should return error when creating a user with an unexpected error', (done) => {
+    const UserMock = sinon.mock(new User({ email: 'test@gmail.com', password: 'root' }));
+    const user = UserMock.object;
+    const expectedError = new Error('Unexpected error');
+
+    UserMock
+      .expects('save')
+      .yields(expectedError);
+
+    user.save((err) => {
+      UserMock.verify();
+      UserMock.restore();
+      expect(err).to.equal(expectedError);
+      done();
+    });
+  });
+
+  it('should retrieve all users', (done) => {
+    const userMock = sinon.mock(User);
+    const expectedUsers = [
+      { email: 'user1@gmail.com' },
+      { email: 'user2@gmail.com' }
+    ];
+
+    userMock
+      .expects('find')
+      .yields(null, expectedUsers);
+
+    User.find({}, (err, result) => {
+      userMock.verify();
+      userMock.restore();
+      expect(err).to.be.null;
+      expect(result).to.be.an('array');
+      expect(result.length).to.equal(2);
+      done();
+    });
+  });
+
+  it('should return error when retrieving all users fails', (done) => {
+    const userMock = sinon.mock(User);
+    const expectedError = new Error('Database read error');
+
+    userMock
+      .expects('find')
+      .yields(expectedError);
+
+    User.find({}, (err, result) => {
+      userMock.verify();
+      userMock.restore();
+      expect(err).to.equal(expectedError);
+      expect(result).to.be.undefined;
+      done();
+    });
+  });
 });
+
