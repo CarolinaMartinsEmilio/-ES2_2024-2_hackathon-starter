@@ -114,12 +114,28 @@ const { MongoMemoryServer } = require('mongodb-memory-server');
         .expect(404, done);
     });
   });
-  //novo teste
+  
    describe('GET /api/github', () => {
     it('should return 200 OK', (done) => {
       request(app)
         .get('/api/github')
         .expect(200, done);
+    });
+  });
+
+  describe('GET /api/profile', () => {
+    it('should return 200 OK', (done) => {
+      request(app)
+        .get('/api/profile')
+        .expect(200, done);
+    });
+  });
+
+  describe('GET /nonexistent-route', () => {
+    it('should return 404', (done) => {
+      request(app)
+        .get('/nonexistent-route')
+        .expect(404, done);
     });
   });
 })();
