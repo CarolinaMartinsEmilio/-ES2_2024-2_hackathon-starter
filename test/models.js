@@ -340,7 +340,7 @@ describe('User Model', () => {
       done();
     });
   });
-  
+
   it('should return an error if bcrypt throws an exception', (done) => {
     const user = new User({ email: 'test@example.com', password: 'plainpassword' });
 
@@ -350,6 +350,18 @@ describe('User Model', () => {
       expect(err).to.be.an('error');
       expect(err.message).to.equal('bcrypt error');
       expect(isMatch).to.be.undefined;
+      bcrypt.verify.restore();
+      done();
+    });
+  });
+  it('should return false for incorrect password', (done) => {
+    const user = new User({ email: 'test@example.com', password: 'plainpassword' });
+
+    sinon.stub(bcrypt, 'verify').resolves(false);
+
+    user.comparePassword('wrongpassword', (err, isMatch) => {
+      expect(err).to.be.null;
+      expect(isMatch).to.be.false;
       bcrypt.verify.restore();
       done();
     });
