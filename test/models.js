@@ -1,6 +1,10 @@
 const { expect } = require('chai');
 const sinon = require('sinon');
 const User = require('../models/User');
+const bcrypt = require('@node-rs/bcrypt');
+const crypto = require('crypto');
+const mongoose = require('mongoose');
+
 
 describe('User Model', () => {
   it('should create a new user', (done) => {
@@ -333,6 +337,20 @@ describe('User Model', () => {
       userMock.restore();
       expect(err).to.equal(expectedError);
       expect(result).to.be.undefined;
+      done();
+    });
+  });
+  
+  it('should return an error if bcrypt throws an exception', (done) => {
+    const user = new User({ email: 'test@example.com', password: 'plainpassword' });
+
+    sinon.stub(bcrypt, 'verify').rejects(new Error('bcrypt error'));
+
+    user.comparePassword('plainpassword', (err, isMatch) => {
+      expect(err).to.be.an('error');
+      expect(err.message).to.equal('bcrypt error');
+      expect(isMatch).to.be.undefined;
+      bcrypt.verify.restore();
       done();
     });
   });
