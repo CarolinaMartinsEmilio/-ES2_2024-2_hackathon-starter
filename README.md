@@ -81,7 +81,7 @@ Os seguintes botões apresentam erro ao tentar fazer login:
 
 A maioria dos botões da página API Examples está funcionando corretamente. No entanto, os botões do Facebook, Google Drive e Google Sheets apresentam erros que impedem a autenticação ou acesso.
 
-3️⃣ **Verificação do conteúdo da página "Contact".
+3️⃣ **Verificação do conteúdo da página "Contact".**
 
 🎯 **Objetivo do Teste:** Verificar se o formulário de contato está funcionando corretamente e enviando os dados conforme esperado.
 
@@ -91,6 +91,13 @@ A maioria dos botões da página API Examples está funcionando corretamente. No
 
 ![Mensagem de sucesso](Imagens/sucesso.PNG)
 
+4️⃣ **Verificação do conteúdo da página "Login".**
+
+🎯 **Objetivo do Teste:** Verificar se a página de Login funciona corretamente, validando as credenciais do usuário e permitindo a recuperação de senha quando necessário.
+
+ - **Resultado Esperado:** O sistema deve autenticar o usuário e redirecioná-lo para a página inicial. Caso inserir senha ou email incorretos, o sistema deve exibir uma mensagem de erro informando que as credenciais estão incorretas. Ao clicar no botão "fORGOT YOUR PASSWORD" e inseir seu email, o sistema deve enviar um e-mail com as instruções para redefinição de senha.
+   
+- **Resultado Obtido:** O usuário foi autenticado e redirecionado corretamente. Ao inserir o email ou a senha incorreta, a mensagem de erro foi exibida corretamente. No caso de redefinir a senha o e-mail foi enviado e o link para redefinição de senha foi recebido.
 ---
 ## 🎥 Gravação dos Testes
 
