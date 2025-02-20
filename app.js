@@ -245,7 +245,10 @@ app.get('/auth/quickbooks', passport.authorize('quickbooks', { scope: ['com.intu
 app.get('/auth/quickbooks/callback', passport.authorize('quickbooks', { failureRedirect: '/login' }), (req, res) => {
   res.redirect(req.session.returnTo);
 });
-
+// app.get hackathons
+app.get('/hackathons', (req, res) => {
+  res.render('hackathons', { title: 'Hackathons Perto de Mim' });
+});
 /**
  * Error Handler.
  */
