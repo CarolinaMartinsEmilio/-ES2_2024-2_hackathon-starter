@@ -110,6 +110,7 @@ app.use((req, res, next) => {
 app.use(lusca.xframe('SAMEORIGIN'));
 app.use(lusca.xssProtection(true));
 app.disable('x-powered-by');
+app.use(express.static('public'));
 app.use((req, res, next) => {
   res.locals.user = req.user;
   next();
