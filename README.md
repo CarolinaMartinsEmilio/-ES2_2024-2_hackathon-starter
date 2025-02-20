@@ -98,6 +98,14 @@ A maioria dos botões da página API Examples está funcionando corretamente. No
  - **Resultado Esperado:** O sistema deve autenticar o usuário e redirecioná-lo para a página inicial. Caso inserir senha ou email incorretos, o sistema deve exibir uma mensagem de erro informando que as credenciais estão incorretas. Ao clicar no botão "fORGOT YOUR PASSWORD" e inseir seu email, o sistema deve enviar um e-mail com as instruções para redefinição de senha.
    
 - **Resultado Obtido:** O usuário foi autenticado e redirecionado corretamente. Ao inserir o email ou a senha incorreta, a mensagem de erro foi exibida corretamente. No caso de redefinir a senha o e-mail foi enviado e o link para redefinição de senha foi recebido.
+
+5️⃣ **Verificação do conteúdo da página "Create Account".**
+
+🎯 **Objetivo do Teste:** Verificar se o processo de cadastro de um novo usuário está funcionando corretamente, incluindo todos os campos e a funcionalidade do botão "Sign Up".
+
+ - **Resultado Esperado:** O cadastro do usuário deve ser realizado com sucesso. O sistema deve redirecionar o usuário para a próxima página ou exibir uma mensagem de sucesso. O botão "Sign Up" deve estar visível e funcional, permitindo que o usuário submeta o formulário.
+   
+- **Resultado Obtido:** O cadastro foi realizado com sucesso, e o sistema redirecionou para a próxima página ou exibiu a mensagem de sucesso. O botão "Sign Up" funcionou corretamente, enviando as informações inseridas para o backend.
 ---
 ## 🎥 Gravação dos Testes
 
