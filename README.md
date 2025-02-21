@@ -9,7 +9,7 @@
 - 🧑 **[lgstavo](https://github.com/lgstavo)**
 
 ---
-### ✅ Testes Manuais (via GUI) 
+## ✅ Testes Manuais (via GUI) 
 * **Ambiente de Teste:**
   - Navegador: Microsoft Edge, Google Chrome
   - Sistema Operacional: Windows 🖥️, Linux 🐧
@@ -145,7 +145,7 @@ Você pode assistir à gravação dos testes manuais no seguinte link:
 
 ---
 
-👩‍💻 **Configuração do GitHub Actions**
+## 👩‍💻 Configuração do GitHub Actions
 
 No nosso trabalho, o GitHub Actions já veio habilitado, pois o sistema-alvo open-source que utilizamos, "hackathon-starter", já possuía essa configuração. O GitHub Actions está executando um workflow chamado "Node.js CI", que é acionado automaticamente sempre que há commits e pull requests no repositório.
 
@@ -159,7 +159,29 @@ O uso do GitHUb Actions, trouxe benefícios como:
 
 - Histórico de execuções, permitindo identificar problemas rapidamente e melhorar a qualidade do código.
 
-  ---
+---
 
-  📈 **Casos de testes implementados**
+ ## 📈 Casos de testes implementados
+  
+Os novos casos de testes implementados, são os seguintes:
 
+1. should return error if user deletion fails
+2. should return error if password comparison fails
+3. should update a user email
+4. should return error if user update fails
+5. should return error if user is not found by ID
+6. should return error when trying to delete a nonexistent user
+7. should return error if gravatar generation fails
+8. should return error if user saving fails due to database error
+9. should return error if findById fails
+10. should return error when creating a user with an unexpected error
+11. should retrieve all users
+12. should return error when retrieving all users fails
+13. should return an error if bcrypt throws an exception
+14. should return false for incorrect password
+
+![Novos casos de testes implementaods](https://github.com/user-attachments/assets/8a2fc253-045f-4254-bff0-54886ac651a7)
+
+Foram adicionados 14 novos casos de testes para cobrir cenários que não estavam sendo validados no código original. A cobertura de código aumentou de 70.83% para 75%, indicando que agora mais trechos de código estão sendo testados. 
+
+---
