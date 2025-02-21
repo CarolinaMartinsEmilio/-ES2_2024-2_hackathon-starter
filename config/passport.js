@@ -616,49 +616,6 @@ exports.isAuthenticated = (req, res, next) => {
   res.redirect('/login');
 };
 
-/**
- * Authorization Required middleware.
- */
-/*exports.isAuthorized = async (req, res, next) => {
-  const provider = req.path.split('/')[2];
-  const token = req.user.tokens.find((token) => token.kind === provider);
-  if (token) {
-    if (token.accessTokenExpires && moment(token.accessTokenExpires).isBefore(moment().subtract(1, 'minutes'))) {
-      if (token.refreshToken) {
-        if (token.refreshTokenExpires && moment(token.refreshTokenExpires).isBefore(moment().subtract(1, 'minutes'))) {
-          return res.redirect(`/auth/${provider}`);
-        }
-        try {
-          const newTokens = await new Promise((resolve, reject) => {
-            refresh.requestNewAccessToken(`${provider}`, token.refreshToken, (err, accessToken, refreshToken, params) => {
-              if (err) reject(err);
-              resolve({ accessToken, refreshToken, params });
-            });
-          });
-
-          req.user.tokens.forEach((tokenObject) => {
-            if (tokenObject.kind === provider) {
-              tokenObject.accessToken = newTokens.accessToken;
-              if (newTokens.params.expires_in) tokenObject.accessTokenExpires = moment().add(newTokens.params.expires_in, 'seconds').format();
-            }
-          });
-
-          await req.user.save();
-          return next();
-        } catch (err) {
-          console.log(err);
-          return next();
-        }
-      } else {
-        return res.redirect(`/auth/${provider}`);
-      }
-    } else {
-      return next();
-    }
-  } else {
-    return res.redirect(`/auth/${provider}`);
-  }
-};*/
 
 exports.isAuthorized = async (req, res, next) => {
   const provider = req.path.split('/')[2];
