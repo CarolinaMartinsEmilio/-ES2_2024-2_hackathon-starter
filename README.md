@@ -89,7 +89,7 @@ A maioria dos botões da página API Examples está funcionando corretamente. No
    
 - **Resultado Obtido:** O formulário de contato funciona corretamente e exibe a mensagem de sucesso.
 
-![Mensagem de sucesso](Imagens/sucesso.PNG)
+![Mensagem de sucesso](https://github.com/user-attachments/assets/2ae5c6df-02d7-4453-a3c0-bfa242891c54)
 
 4️⃣ **Verificação do conteúdo da página "Login".**
 
@@ -144,3 +144,22 @@ Você pode assistir à gravação dos testes manuais no seguinte link:
 - Melhorias nos testes podem focar nessas linhas para aumentar a cobertura.
 
 ---
+
+👩‍💻 **Configuração do GitHub Actions**
+
+No nosso trabalho, o GitHub Actions já veio habilitado, pois o sistema-alvo open-source que utilizamos, "hackathon-starter", já possuía essa configuração. O GitHub Actions está executando um workflow chamado "Node.js CI", que é acionado automaticamente sempre que há commits e pull requests no repositório.
+
+Por meio do GitHub Actions, conseguimos acompanhar informações como eventos que disparam a execução, como commits e pull requests, tarefas realizadas, duração média das execuções, histórico de execuções, permitindo rastrear cada execução e seu status.
+
+O uso do GitHUb Actions, trouxe benefícios como:
+
+- Automação de testes, garantindo que novas alterações não quebrem o código.
+
+- Facilidade de integração, pois cada commit e pull request passa por verificações automáticas.
+
+- Histórico de execuções, permitindo identificar problemas rapidamente e melhorar a qualidade do código.
+
+  ---
+
+  📈 **Casos de testes implementados**
+
