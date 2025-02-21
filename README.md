@@ -185,3 +185,14 @@ Os novos casos de testes implementados, são os seguintes:
 Foram adicionados 14 novos casos de testes para cobrir cenários que não estavam sendo validados no código original. A cobertura de código aumentou de 70.83% para 75%, indicando que agora mais trechos de código estão sendo testados. 
 
 ---
+
+## ☑️ Problemas apontados pelo SonarQube
+
+[Original Issues - ES2_2024-2_hackathon-starter in SonarQube Cloud.pdf](https://github.com/user-attachments/files/18908108/Original.Issues.-.ES2_2024-2_hackathon-starter.in.SonarQube.Cloud.pdf)
+
+Cada membro ficou responsavel por resolver um problema apontado pelo Sonar
+
+Nataly resolveu "Remove this commented out code".
+Larys resolveu "Merge this RUN Instruction with the consecutive ones".
+Carolina resolveu "".
+Luiz resolveu "".
