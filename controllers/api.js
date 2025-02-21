@@ -739,8 +739,8 @@ exports.getGoogleSheets = (req, res) => {
   });
 
   const url = 'https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit#gid=0';
-  const re = /spreadsheets\/d\/([a-zA-Z0-9-_]+)/;
-  const id = url.match(re)[1];
+  const match = re.exec(url);
+  const id = match ? match[1] : null;
 
   sheets.spreadsheets.values.get({
     spreadsheetId: id,
