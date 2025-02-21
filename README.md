@@ -192,10 +192,10 @@ Foram adicionados 14 novos casos de testes para cobrir cenários que não estava
 
 Cada membro ficou responsavel por resolver um problema apontado pelo Sonar
 
-Nataly resolveu "Remove this commented out code".
+👩‍💻 Nataly resolveu "Remove this commented out code".
 
-Karys resolveu "Merge this RUN Instruction with the consecutive ones".
+👩‍💻 Karys resolveu "Merge this RUN Instruction with the consecutive ones".
 
-Carolina resolveu "Use the "RegExp.exec()" method instead".
+👩‍💻 Carolina resolveu "Use the "RegExp.exec()" method instead".
 
-Luiz resolveu "Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed".
+👩‍💻 Luiz resolveu "Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed".
