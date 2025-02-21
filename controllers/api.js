@@ -58,12 +58,8 @@ exports.getFoursquare = async (req, res, next) => {
  * Tumblr API example.
  */
 exports.getTumblr = (req, res, next) => {
-  // const token = req.user.tokens.find((token) => token.kind === 'tumblr'); //unused
   const appkey = process.env.TUMBLR_KEY;
-  // const appsecret = process.env.TUMBLR_SECRET; //unused in this example
-  // const accessToken = token.accessToken; //unused in this example
-  // const tokenSecret = token.tokenSecret; //unused in this example
-
+  
   const blogId = 'mmosdotcom-blog.tumblr.com';
   const postType = 'photo';
   axios.get(`https://api.tumblr.com/v2/blog/${blogId}/posts/${postType}?api_key=${appkey}`)
